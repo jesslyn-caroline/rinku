@@ -17,7 +17,7 @@ function Hero() {
                 <input className={`w-full text-sm px-3 md:px-4 py-3.5 `} placeholder="https://your-long-url.com/paste/here"/>
                 <div className={`flex flex-row justify-between items-center px-3 md:px-4 py-2`}>
                     <span className={`uppercase text-xs tracking-widest`}>Paste or type a URL</span>
-                    <button className={`uppercase flex flex-row items-center gap-x-2 bg-primary hover:bg-primary/80 transition px-3 md:px-4 py-2.5 text-background`}>
+                    <button className={`uppercase flex flex-row items-center gap-x-1 md:gap-x-2 bg-primary hover:bg-primary/80 transition px-3 md:px-4 py-2.5 text-background`}>
                         <span className={`font-dm-mono text-xs tracking-widest`}>Shorten</span>
                         <RiArrowRightLine size={16} />
                     </button>
