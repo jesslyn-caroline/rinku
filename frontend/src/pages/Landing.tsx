@@ -6,9 +6,9 @@ import Footer from "../layouts/Footer"
 
 function Landing() {
     return (
-    <div className={`w-full flex flex-col justify-center`}>
+    <div className={`w-full flex flex-col items-center`}>
         <NavBar />
-        <div className={`max-w-480 w-full min-h-screen`}>
+        <div className={`max-w-480 min-h-screen w-full flex flex-col `}>
             <Hero />
             <Features />
             <CallToAction />
