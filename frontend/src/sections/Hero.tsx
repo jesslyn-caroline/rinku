@@ -2,8 +2,8 @@ import { RiArrowRightLine } from "@remixicon/react"
 
 function Hero() {
     return (
-    <section className={`flex flex-col  px-6 md:px-16`}>
-        <div className={`min-h-screen flex flex-col justify-center gap-y-4`}>
+    <section className={`flex flex-col`}>
+        <div className={`min-h-screen flex flex-col justify-center gap-y-4 px-6 md:px-16`}>
             <h3 className={`border-l-2 border-primary px-6 py-1 uppercase font-dm-mono text-sm text-secondary tracking-[4px]`}>
                 Url Shortener
             </h3>
@@ -25,14 +25,14 @@ function Hero() {
             </div>
         </div>
         
-        <div className={`grid grid-cols-2 border border-text/12 divide-x divide-text/12`}>
-            <div className={`flex flex-col gap-y-1.5 px-6 lg:px-8 py-6`}>
+        <div className={`px-6 md:px-16 grid grid-cols-2 border border-text/12 divide-x divide-text/12`}>
+            <div className={`flex flex-col gap-y-2 px-6 md:px-12 py-6`}>
                 <h3 className={`text-3xl font-medium`}>847M</h3>
-                <h4 className={`uppercase font-dm-mono text-secondary text-xs tracking-widest`}>Link shortened</h4>
+                <h4 className={`uppercase font-dm-mono text-secondary text-xs tracking-widest`}>Link Shortened</h4>
             </div>
-            <div className={`flex flex-col gap-y-1.5 px-6 lg:px-8 py-6`}>
+            <div className={`flex flex-col gap-y-2 px-6 md:px-12 py-6`}>
                 <h3 className={`text-3xl font-medium`}>847</h3>
-                <h4 className={`uppercase font-dm-mono text-secondary text-xs tracking-widest`}>Link shortened</h4>
+                <h4 className={`uppercase font-dm-mono text-secondary text-xs tracking-widest`}>Clicks Tracked</h4>
             </div>
         </div>
     </section>
