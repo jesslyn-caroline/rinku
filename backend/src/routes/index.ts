@@ -1,6 +1,6 @@
 import express from 'express'
-import { validateUserData } from '../middlewares/userMiddleware.ts'
-import { login, sendCode, signup, verifyCode } from '../controllers/userController.ts'
+import { validateUserData } from '../middlewares/userMiddleware'
+import { login, sendCode, signup, verifyCode } from '../controllers/userController'
 
 const router = express.Router()
 

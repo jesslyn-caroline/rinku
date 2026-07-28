@@ -1,11 +1,11 @@
 import type { Request, Response } from "express"
 import * as jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
-import { type TUser, UserModel } from "../models/UserModel.ts"
-import { VerificationCodeModel } from "../models/VerificationCodeModel.ts"
-import { JWT_SECRET, SALT_ROUNDS } from "../utils/env.ts"
-import { sendVerificationCode } from "../utils/sendEmail.tsx"
-import { generateCode } from "../utils/generateCode.ts"
+import { type TUser, UserModel } from "../models/UserModel"
+import { VerificationCodeModel } from "../models/VerificationCodeModel"
+import { JWT_SECRET, SALT_ROUNDS } from "../utils/env"
+import { sendVerificationCode } from "../utils/sendEmail"
+import { generateCode } from "../utils/generateCode"
 
 async function login(req: Request, res: Response) {
     const { email, password } = req.body

@@ -4,8 +4,8 @@ import cors from "cors"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 
-import { DATABASE_URL } from "./utils/env.ts"
-import router from "./routes/index.ts"
+import { DATABASE_URL } from "./utils/env"
+import router from "./routes/index"
 
 const app = express()
 

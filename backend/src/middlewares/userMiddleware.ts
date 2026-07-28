@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from "express"
 import * as Yup from "yup"
-import type { TUser } from "../models/UserModel.ts"
+import type { TUser } from "../models/UserModel"
 
 const userValidation = Yup.object({
     email: Yup
