@@ -1,8 +1,8 @@
 import React from "react"
 import nodemailer from 'nodemailer'
 import { render } from "@react-email/render"
-import { PASS, USER } from './env.ts'
-import Email from '../emails/Email.tsx'
+import { PASS, USER } from './env'
+import Email from '../emails/Email'
 
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
