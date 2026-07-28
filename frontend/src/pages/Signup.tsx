@@ -1,4 +1,4 @@
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 import InputField from "../components/fields/InputField"
 import BlockButton from "../components/buttons/BlockButton"
 import { RiArrowRightLine } from "@remixicon/react"

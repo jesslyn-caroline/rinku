@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { login, resendOTPToEmail, signup, verifyCode } from "../services/auth"
-import { useLocation, useNavigate } from "react-router"
+import { useLocation, useNavigate } from "react-router-dom"
 import showToast from "../components/toasts/Toasts"
 
 function useAuth() {
