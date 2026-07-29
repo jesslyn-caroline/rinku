@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es2022",
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "noEmit": true,
