@@ -3,7 +3,7 @@ import useAuth from "../hooks/useAuth"
 import { RiMailLine } from "@remixicon/react"
 
 function SignupVerify() {
-    const { email, otp, countDown, onOTPChange, resendOTP } = useAuth()
+    const { email, otp, countDown, loading, onOTPChange, resendOTP } = useAuth()
 
     const emailFormat = `${email.slice(0, 2)}***${email.slice(-1 * (email.length - email.indexOf('@')))}`
 
@@ -21,7 +21,7 @@ function SignupVerify() {
             <OTPInput value={otp} 
                 onChange={(value) => onOTPChange(value)} 
                 numInputs={6}  
-                renderInput={(props) => <input {...props} /> }
+                renderInput={(props) => <input {...props} disabled={loading}/> }
                 inputType="number"
                 skipDefaultStyles
                 containerStyle={`gap-x-4`}
