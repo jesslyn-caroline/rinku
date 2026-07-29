@@ -8,6 +8,7 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "types": ["node"],
+    "jsx": "react-jsx",
 
     /* Enable Extensionless Import Support */
     "esModuleInterop": true,
