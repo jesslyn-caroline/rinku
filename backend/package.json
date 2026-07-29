@@ -3,7 +3,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts"
   },
-  "type": "module",
   "dependencies": {
     "@react-email/components": "^1.0.12",
     "@react-email/render": "^2.0.10",
