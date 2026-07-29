@@ -52,12 +52,15 @@ function useAuth() {
     }
 
     const onOTPComplete = async (otp: string) => {
+        setLoading(true)
         if (otp.length !== 6) return
 
         const response = await verifyCode(email, otp)
 
         if (!response.success) showToast(response.message)
         else navigate('/login')
+
+        setLoading(false)
     }
 
     const loginAccount = async () => {
