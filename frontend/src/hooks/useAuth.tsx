@@ -66,7 +66,15 @@ function useAuth() {
     const loginAccount = async () => {
         const response = await login(email, password)
 
-        if (!response.success) showToast(response.message)
+        
+        if (!response.success) {
+            showToast(response.message)
+            
+            if (response.accountStatus === 'unverified') {
+                resendOTP()
+                navigate('/signup/verify', { state: { email } })
+            }
+        }
         else console.log(response.message)
     }
 
