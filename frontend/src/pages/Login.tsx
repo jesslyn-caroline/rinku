@@ -5,7 +5,7 @@ import { RiArrowRightLine } from "@remixicon/react"
 import useAuth from "../hooks/useAuth"
 
 function Login() {
-    const { email, password, emailC, passwordC, loginAccount } = useAuth()
+    const { email, password, loading, emailC, passwordC, loginAccount } = useAuth()
 
     return (
     <div className={`w-full mt-24 flex justify-center`}>
@@ -18,11 +18,11 @@ function Login() {
                     Signup
                 </Link>
             </div>
-            <InputField label="Email" placeholder="Enter your email" type='email' id='email' value={email} onChange={emailC} />
-            <InputField label="Password" placeholder="Enter your password" type='password' id='password' value={password} onChange={passwordC}/>
+            <InputField label="Email" placeholder="Enter your email" type='email' id='email' value={email} onChange={emailC} disabled={loading} />
+            <InputField label="Password" placeholder="Enter your password" type='password' id='password' value={password} onChange={passwordC} disabled={loading}/>
             <span className={`font-dm-mono text-sm text-secondary`}>Forgot Password?</span>
             <div className={`my-1`}/>
-            <BlockButton label="Log in" Icon={RiArrowRightLine} onClick={loginAccount}/>
+            <BlockButton label="Log in" Icon={RiArrowRightLine} onClick={loginAccount} disabled={loading}/>
         </div>
     </div>
 )}
