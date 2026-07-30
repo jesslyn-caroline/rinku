@@ -1,9 +1,12 @@
 import OTPInput from "react-otp-input"
 import useAuth from "../hooks/useAuth"
 import { RiMailLine } from "@remixicon/react"
+import { Navigate } from "react-router-dom"
 
 function SignupVerify() {
     const { email, otp, countDown, loading, onOTPChange, resendOTP } = useAuth()
+
+    if (email === '') return <Navigate to = '/signup' replace={true} />
 
     const emailFormat = `${email.slice(0, 2)}***${email.slice(-1 * (email.length - email.indexOf('@')))}`
 
