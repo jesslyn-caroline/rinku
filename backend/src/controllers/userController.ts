@@ -16,6 +16,14 @@ async function login(req: Request, res: Response) {
         if (!user) {
             return res.status(404).json({
                 message: "Could not find user with this email.",
+                accountStatus: "not-created"
+            })
+        }
+
+        if (!user.isVerified) {
+            return res.status(401).json({
+                message: "Email is not verified.",
+                accountStatus: "unverified",
             })
         }
 
@@ -24,6 +32,7 @@ async function login(req: Request, res: Response) {
         if (!isMatch) {
             return res.status(401).json({
                 message: "Password not match.",
+                accountStatus: "password-not-match"
             })
         }
 
