@@ -32,13 +32,17 @@ function SideBar({ isOpen, isMobile, toggleSideBar }: Props) {
             { navigation.map((nav) => {
                 const { path, label, Icon } = nav
                 return (
-                <Link to={nav.path} className={`
-                    outline-none w-full h-fit p-3 flex flex-row items-center gap-x-4 
-                    ${ location.pathname === path ? 
-                        'bg-primary/10 border-l-3 border-primary' : 
-                        'hover:bg-secondary/10' 
-                    } transition
-                `}>
+                <Link 
+                    to={nav.path}
+                    onClick={() => isMobile && toggleSideBar(false)}
+                    className={`
+                        outline-none w-full h-fit p-3 flex flex-row items-center gap-x-4 
+                        ${ location.pathname === path ? 
+                            'bg-primary/10 border-l-3 border-primary' : 
+                            'hover:bg-secondary/10' 
+                        } transition
+                    `}
+                >
                     <Icon size={18} className={location.pathname === nav.path ? 'text-primary' : 'text-secondary'}/>
                     <span className={`
                         uppercase font-dm-mono text-sm tracking-widest 
