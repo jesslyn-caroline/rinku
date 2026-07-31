@@ -6,10 +6,12 @@ import Logo from "../components/others/Logo"
 
 function DashboardLayout() {
 
-    const [isOpen, setIsOpen] = useState<boolean>(true)
+    const currWidth = window.innerWidth < 768
+
+    const [isOpen, setIsOpen] = useState<boolean>(!currWidth)
     const toggleSideBar = (value: boolean) => setIsOpen(value)
 
-    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768)
+    const [isMobile, setIsMobile] = useState<boolean>(currWidth)
     const handleResize = () => setIsMobile(window.innerWidth < 768)
 
     useEffect(() => window.addEventListener('resize', handleResize))
@@ -23,7 +25,7 @@ function DashboardLayout() {
 
         <div className={`w-full flex flex-col divide-y divide-text/12`}>
             <div className={`flex flex-row justify-between items-center px-5 py-3`}>
-                <RiMenuLine size={20} onClick={() => toggleSideBar(true)} className={isOpen ? 'hidden' : 'block'}/>
+                <RiMenuLine size={20} onClick={() => toggleSideBar(true)} className={isOpen && !isMobile? 'hidden' : 'block'}/>
                 <Logo />     
             </div>
             <div className={`p-4`}>
